@@ -1,0 +1,19 @@
+#!wing
+#!version=5.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+console.toolbox = []
+proj.file-list = [loc('config_beijing_bid.json'),
+                  loc('config_beijing_bid_result.json'),
+                  loc('config_jiangsu_bid.json'),
+                  loc('config_shanghai_bid.json'),
+                  loc('config_shanghai_bid_result.json'),
+                  loc('config_tianjin_bid.json'),
+                  loc('config_tianjin_bid_result.json'),
+                  loc('import_mssql.py'),
+                  loc('pageparser.py'),
+                  loc('params.py'),
+                  loc('universaltask.py')]
+proj.file-type = 'shared'
