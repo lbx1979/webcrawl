@@ -1,0 +1,80 @@
+{
+	"location": "tianjin",
+	"output": {
+		"type": "file",
+		"file": "tianjin_bid.txt"
+	},
+	"urls": ["http://www.tjconstruct.cn/zbxx.aspx?type=all&page=#key#"],
+	"detailurl": "http://www.tjconstruct.cn/",
+	"url1paginate": {
+		"method": "get",
+		"replacekey": "#key#",
+		"replaceexpress": "#number#",
+		"initexpress": "1",
+		"pageorder": "asc",
+		"maxpagecount": 100,
+		"maxpagetag": {
+			"name": "div",
+			"attrs": {
+				"id": "ctl00_ContentPlaceHolder1_ctl00_AspNetPager1"
+			},
+			"reg": ",共(\\d+)"
+		},
+		"curpagetag": {
+			"name": "div",
+			"attrs": {
+				"id": "ctl00_ContentPlaceHolder1_ctl00_AspNetPager1"
+			},
+			"reg": "当前(\\d+)"
+		}
+	},
+	"url1list": {
+	   "containertag": {
+		"name":"table", "attrs": {"id":"Tp1"},
+		"subtag": {"func":"find_all", "name":"a", "attrs": {"class": "a09"},"valueattr": "href" }
+		}
+	},
+	"url1parser": {
+		"XMBH": {
+			"name": "span",
+			"attrs": {
+				"class": "numeral",
+				"style": "width:150px;text-align:center"
+			}
+		},
+		"XMMC": {
+			"reg": "本招标项目(.+?)已由"
+		},
+		"SSDQ": {
+			"default": "天津"
+		},
+		"SSDQBH": {
+			"default": "天津"
+		},
+		"JSDW": {
+			"reg": "项目建设单位为(.+?)，"
+		},
+		"JZMJ": {
+			"default": ""
+		},
+		"ZBLX": {
+			"name": "span",
+			"attrs": {
+				"class": "title"
+			},
+			"format": {
+				"left": 2
+			}
+		},
+		"ZBFW": {
+			"default": ""
+		},
+		"HTGSJ": {
+			"reg": "建设资金为(\\d+?)元",
+			"format": "tenthousand"
+		},
+		"GGFBSJ": {
+			"reg": "招标公告发布时间：(.+) 年 (.+) 月 (.+) 日 至"
+		}
+	}
+}

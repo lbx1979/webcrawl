@@ -1,0 +1,146 @@
+{
+  "location": "shanghai",
+  "output": {
+    "type": "file",
+    "file": "shanghai_bid.txt"
+  },
+  "urls": [
+    "http://www.ciac.sh.cn/zbxx_new.aspx"
+  ],
+  "detailurl": "https://www.ciac.sh.cn/NetInterBidWeb/GKTB/Default.aspx?gkzbXh=#id#",
+  "url1paginate": {
+    "method": "post",
+    "replacekey": "PageListControl1$ctl06",
+    "replaceexpress": "#number#",
+    "initexpress": "1",
+    "pageorder": "asc",
+    "maxpagecount": 10,
+    "maxpagetag": {
+      "name": "select",
+      "attrs": {
+        "name": "PageListControl1$ctl06"
+      },
+      "subtag": {
+        "func": "findChildren",
+        "name": "option",
+        "index": -1
+      }
+    },
+    "curpagetag": {
+      "name": "select",
+      "attrs": {
+        "id": "PageListControl1$ctl06"
+      },
+      "subtag": {
+        "func": "findChildren",
+        "name": "option",
+        "attrs": {
+          "selected": true
+        }
+      }
+    },
+    "postdata": {
+      "__EVENTTARGET": {
+        "default": ""
+      },
+      "__EVENTARGUMENT": {
+        "default": ""
+      },
+      "__VIEWSTATE": {
+        "name": "input",
+        "attrs": {
+          "name": "__VIEWSTATE"
+        },
+        "valueattr": "value"
+      },
+      "__EVENTVALIDATION": {
+        "name": "input",
+        "attrs": {
+          "name": "__EVENTVALIDATION"
+        },
+        "valueattr": "value"
+      },
+      "textfield": {
+        "default": ""
+      },
+      "drpZblb": {
+        "default": ""
+      },
+      "txtBmrqS": {
+        "default": ""
+      },
+      "txtBmrqE": {
+        "default": ""
+      },
+      "PageListControl1$ctl05": {
+        "default": "跳  转"
+      },
+      "PageListControl1$ctl06": {
+        "default": ""
+      }
+    }
+  },
+  "url1list": {
+   "containertag": {
+        "name":"span", "attrs": {"id":"PageListControl1"},
+        "subtag": {"func":"find_all", "name":"a", "attrs": {},"valueattr": "href" }
+        },    
+    "replacekey": "#id#",
+    "replaceexpress": "\\d+"
+  },
+  "url1request":{
+    "headers":{
+      "User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0;)"},
+    "verify":false 
+  },  
+  
+  "url1parser": {
+    "XMBH": {
+      "name": "span",
+      "attrs": {
+        "id": "ctl00_ContentPlaceHolder1_lblbjbh"       
+      }
+    },
+    "XMMC": {
+      "name":"span",
+      "attrs": {
+        "id": "ctl00_ContentPlaceHolder1_lblgcmc"       
+      }
+    },
+    "SSDQ": {
+      "default": "上海"
+    },
+    "SSDQBH": {
+      "default": "上海"
+    },
+    "JSDW": {
+      "name":"span",
+      "attrs": {
+        "id": "ctl00_ContentPlaceHolder1_lblzbr"       
+      }
+    },
+    "JZMJ": {
+      "default": ""
+    },
+    "ZBLX": {
+      "name": "span",
+      "attrs": {
+        "id": "ctl00_ContentPlaceHolder1_InfoGcmsSg_lblgclb"
+      }
+    },
+    "ZBFW": {
+      "default": ""
+    },
+    "HTGSJ": {
+      "name": "span",
+        "attrs": {
+          "id": "ctl00_ContentPlaceHolder1_InfoGctz1_lblgcgys_net"
+      }
+    },
+    "GGFBSJ": {
+      "name":"span",
+      "attrs":{"id":"ctl00_ContentPlaceHolder1_lblHqzbwjsj"},
+      "reg": "(\\d+)-(\\d+)-(\\d+) 至+?"
+    }
+  }
+}

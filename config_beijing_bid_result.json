@@ -1,0 +1,147 @@
+{
+  "location": "beijing",
+  "output": {
+    "type": "file",
+    "file": "beijing_bid_result.txt"
+  },
+"urls" : ["http://www.bcactc.com/home/gcxx/now_kcsjzbgs.aspx",
+           "http://www.bcactc.com/home/gcxx/now_sgzbgs.aspx",
+           "http://www.bcactc.com/home/gcxx/now_jlzbgs.aspx",
+           "http://www.bcactc.com/home/gcxx/now_zyzbgs.aspx",
+           "http://www.bcactc.com/home/gcxx/now_clsbzbgs.aspx",
+           "http://www.bcactc.com/home/gcxx/now_lwzbgs.aspx"],
+"detailurl":"http://www.bcactc.com/home/gcxx/",
+  "urlpaginate": {
+    "method": "post",
+    "replacekey": "num_TextBox",
+    "replaceexpress": "#number#",
+    "initexpress": "1",
+    "pageorder": "asc",
+    "maxpagecount": 10,
+    "maxpagetag": {
+      "name": "span",
+      "attrs": {
+        "id": "lblPageCount"
+      }
+    },
+    "curpagetag": {
+      "name": "span",
+      "attrs": {
+        "id": "lblCurrentIndex"
+      }
+    },
+    "postdata": {
+      "__EVENTTARGET": {
+        "default": "num_TextBox"
+      },
+      "__EVENTARGUMENT": {
+        "default": ""
+      },
+      "__LASTFOCUS":{"default": ""},
+      "__VIEWSTATE": {
+        "name": "input",
+        "attrs": {
+          "name": "__VIEWSTATE"
+        },
+        "valueattr": "value"
+      },
+      "__EVENTVALIDATION": {
+        "name": "input",
+        "attrs": {
+          "name": "__EVENTVALIDATION"
+        },
+        "valueattr": "value"
+      },
+      "gcmc_TextBox": {
+        "default": ""
+      },
+      "num_TextBox": {
+        "default": ""
+      }
+    }
+  },
+  "urllist": {
+    "containertag": {
+        "name":"table", "attrs": {"id":"DataGrid1"},
+        "subtag": {"func":"find_all", "name":"a", "attrs": {},"valueattr": "href" }
+        }
+  },
+"url1parser":{
+    "XMBH":{"default":""},
+    "XMMC":{"name":"span","attrs":{"id":"gcmc"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"jsdw"}},
+    "ZBFS":{"name":"span","attrs":{"id":"zbfs"}},
+    "JZMJ":{"default":""},
+    "ZBLX":{"default":"勘察设计"},
+    "ZBDW":{"name":"span","attrs":{"id":"zbdw"}},
+    "ZBJG":{"name":"span","attrs":{"id":"zbhte"}},
+    "ZBSJ":{"name":"span","attrs":{"id":"zbrq"}}
+    },
+"url2parser":{
+    "XMBH":{"name":"span","attrs":{"id":"gcbh"}},
+    "XMMC":{"name":"span","attrs":{"id":"gcmc"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"jsdwmc"}},
+    "ZBFS":{"default":""},
+    "JZMJ":{"name":"span","attrs":{"id":"jzmj"}},
+    "ZBLX":{"default":"施工"},
+    "ZBDW":{"name":"span","attrs":{"id":"zbdw"}},
+    "ZBJG":{"default":""},
+    "ZBSJ":{"name":"span","attrs":{"id":"zbsj"}}
+    },
+"url3parser":{
+    "XMBH":{"name":"span","attrs":{"id":"gcbh"}},
+    "XMMC":{"name":"span","attrs":{"id":"gcmc"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"jsdwmc"}},
+    "ZBFS":{"default":""},
+    "JZMJ":{"name":"span","attrs":{"id":"jzmj"}},
+    "ZBLX":{"default":"监理"},
+    "ZBDW":{"name":"span","attrs":{"id":"zbdw"}},
+    "ZBJG":{"default":""},
+    "ZBSJ":{"name":"span","attrs":{"id":"zbsj"}}
+    },
+"url4parser":{
+    "XMBH":{"name":"span","attrs":{"id":"project_no"}},
+    "XMMC":{"name":"span","attrs":{"id":"project_name"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"tenderee"}},
+    "ZBFS":{"default":""},
+    "JZMJ":{"name":"span","attrs":{"id":"area"}},
+    "ZBLX":{"default":"监理"},
+    "ZBDW":{"name":"span","attrs":{"id":"hit_enterprise_name"}},
+    "ZBJG":{"default":""},
+    "ZBSJ":{"name":"span","attrs":{"id":"hit_bid_date"}}
+    },
+"url5parser":{
+    "XMBH":{"name":"span","attrs":{"id":"project_no"}},
+    "XMMC":{"name":"span","attrs":{"id":"project_name"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"tenderee"}},
+    "ZBFS":{"default":""},
+    "JZMJ":{"name":"span","attrs":{"id":"area"}},
+    "ZBLX":{"default":"材料设备"},
+    "ZBDW":{"name":"span","attrs":{"id":"hit_enterprise_name"}},
+    "ZBJG":{"name":"span","attrs":{"id":"hit_value"}},
+    "ZBSJ":{"name":"span","attrs":{"id":"hit_bid_date"}}
+    },
+"url6parser":{
+    "XMBH":{"name":"span","attrs":{"id":"project_no"}},
+    "XMMC":{"name":"span","attrs":{"id":"project_name"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"tenderee"}},
+    "ZBFS":{"default":""},
+    "JZMJ":{"name":"span","attrs":{"id":"area"}},
+    "ZBLX":{"default":"材料设备"},
+    "ZBDW":{"name":"span","attrs":{"id":"hit_enterprise_name"}},
+    "ZBJG":{"name":"span","attrs":{"id":"hit_value"}},
+    "ZBSJ":{"name":"span","attrs":{"id":"hit_bid_date"}}
+    }
+}

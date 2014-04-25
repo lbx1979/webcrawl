@@ -1,0 +1,97 @@
+{
+  "location": "jiangsu",
+  "output": {
+    "type": "file",
+    "file": "jiangsu_bid.txt"
+  },
+  "urls": [
+    "http://http://www.jszb.com.cn/jszb/YW_info/ZhaoBiaoGG/MoreInfo_ZBGG.aspx"
+  ],
+  "detailurl": "http://www.jszb.com.cn/jszb/YW_info/ZhaoBiaoGG/#id#",
+  "urllist": {
+    "containertag": {
+        "name":"table", "attrs": {"id":"MoreInfoList1_DataGrid1"},
+        "subtag": {"func":"find_all", "name":"a", "attrs": {},"valueattr": "onclick" }
+        },
+    "replacekey": "#id#",
+    "replaceexpress": "\"(.+?)\","
+  },
+  "urlpaginate": {
+    "method": "post",
+    "replacekey": "__EVENTARGUMENT",
+    "replaceexpress": "#number#",
+    "initexpress": "1",
+    "pageorder": "asc",
+    "maxpagecount": 200,
+    "maxpagetag": {
+      "searchtext": "条 第：",
+      "subtag": {
+        "func":"find_all", "name":"b","index":1, "reg":"/(\\d+)"
+      }
+    },
+    "curpagetag": {
+      "searchtext": "条 第：",
+      "subtag": {
+        "func":"find_all", "name":"b","index":1, "reg":"(\\d+)/"
+      }
+    },
+    "postdata": {
+      "__CSRFTOKEN": {
+          "name": "input",
+          "attrs": {
+            "name": "__CSRFTOKEN"
+            },
+          "valueattr": "value"
+      },
+      "__EVENTTARGET": {
+        "default": "MoreInfoList1"
+      },
+      "__EVENTARGUMENT":{"default": ""},      
+      "__LASTFOCUS":{"default": ""},
+      "__VIEWSTATE": {
+        "name": "input",
+        "attrs": {
+          "name": "__VIEWSTATE"
+        },
+        "valueattr": "value"
+      },
+      "__EVENTVALIDATION": {
+        "name": "input",
+        "attrs": {
+          "name": "__EVENTVALIDATION"
+        },
+        "valueattr": "value"
+      },
+      "MoreInfoList1$txtProjName": {
+        "default": ""
+      },
+      "MoreInfoList1$txtJSDW": {
+        "default": ""
+      },
+      "MoreInfoList1$StartDate": {
+        "default": ""
+      },
+      "MoreInfoList1$EndDate": {
+        "default": ""
+      },
+      "MoreInfoList1$jpdDi": {
+        "default": "-1"
+      },
+      "MoreInfoList1$jpdXian": {
+        "default": "-1"
+      }
+    }
+  },
+  "url1parser": {
+    "XMBH":{"name":"span","attrs":{"id":"gcbh"}},
+    "XMMC":{"name":"span","attrs":{"id":"gcmc"}},
+    "SSDQ":{"default":"北京"},
+    "SSDQBH":{"default":"北京"},
+    "JSDW":{"name":"span","attrs":{"id":"jsdw"}},
+    "JZMJ":{"name":"span","attrs":{"id":"jzmj"}},
+    "ZBLX":{"default":"勘察设计"},
+    "ZBFW":{"default":""},
+    "HTGSJ":{"name":"span","attrs":{"id":"tze"}},
+    "GGFBSJ":{"name":"span","attrs":{"id":"zbdjrq"}} 
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "location": "shanghai",
+  "output": {
+    "type": "file",
+    "file": "shanghai_bid_result.txt"
+  },
+  "urls": [
+    "http://www.ciac.sh.cn/zbjg_new.aspx"
+  ],
+  "detailurl": "http://www.ciac.sh.cn/WsbsWeb/CIAC/zbjg.aspx?bjbhbdh=#id#",
+  "url1paginate": {
+    "method": "post",
+    "replacekey": "PageListControl1$ctl06",
+    "replaceexpress": "#number#",
+    "initexpress": "1",
+    "pageorder": "asc",
+    "maxpagecount": 10,
+    "maxpagetag": {
+      "name": "select",
+      "attrs": {
+        "name": "PageListControl1$ctl06"
+      },
+      "subtag": {
+        "func": "findChildren",
+        "name": "option",
+        "index": -1
+      }
+    },
+    "curpagetag": {
+      "name": "select",
+      "attrs": {
+        "id": "PageListControl1$ctl06"
+      },
+      "subtag": {
+        "func": "findChildren",
+        "name": "option",
+        "attrs": {
+          "selected": true
+        }
+      }
+    },
+    "postdata": {
+      "__EVENTTARGET": {
+        "default": ""
+      },
+      "__EVENTARGUMENT": {
+        "default": ""
+      },
+      "__VIEWSTATE": {
+        "name": "input",
+        "attrs": {
+          "name": "__VIEWSTATE"
+        },
+        "valueattr": "value"
+      },
+      "__EVENTVALIDATION": {
+        "name": "input",
+        "attrs": {
+          "name": "__EVENTVALIDATION"
+        },
+        "valueattr": "value"
+      },
+      "textfield": {
+        "default": ""
+      },
+      "drpZblb": {
+        "default": ""
+      },
+      "txtBmrqS": {
+        "default": ""
+      },
+      "txtBmrqE": {
+        "default": ""
+      },
+      "PageListControl1$ctl05": {
+        "default": "跳  转"
+      },
+      "PageListControl1$ctl06": {
+        "default": ""
+      }
+    }
+  },
+  "url1list": {
+   "containertag": {
+        "name":"span", "attrs": {"id":"PageListControl1"},
+        "subtag": {"func":"find_all", "name":"a", "attrs": {},"valueattr": "href" }
+        },    
+    "replacekey": "#id#",
+    "replaceexpress": "xh=(.+)"
+  },  
+  "url1parser": {
+    "XMBH": {
+      "name": "span",
+	  "attrs": {
+	    "id": "lblBjbh"       
+	  }
+    },
+    "XMMC": {
+      "searchtext": "招标范围和内容:",
+      "subtag":{"func":"find_next_sibling","name":"td"}
+    },
+    "SSDQ": {
+	    "default": "上海"
+    },
+    "SSDQBH": {
+	    "default": "上海"
+    },
+    "JSDW": {
+      "searchtext": "招标人:",
+      "subtag":{"func":"find_next_sibling","name":"td"}
+    },
+    "JZMJ": {
+	    "default": ""
+    },
+    "ZBLX": {
+      "searchtext": " 中标候选人公示",
+      "format": {
+	"left": 2
+      }
+    },
+    "ZBFW": {
+      "searchtext": "第一中标候选人:",
+      "subtag":{"func":"find_next_sibling","name":"td"}
+    },
+    "HTGSJ": {
+      "searchtext": "第一中标候选人",
+      "subtag":{"func":"find_parent", 
+	"subtag":{"func":"find_next_sibling", 
+	  "subtag":{"func":"find_next_sibling"}}}
+    },
+    "GGFBSJ": {
+      "searchtext": "备案日期:",
+      "subtag":{"func":"find_next_sibling","name":"td"}
+    }
+  }
+}
